@@ -2,7 +2,9 @@ import { Component } from 'react';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import MarvelService from '../../services/MarvelService';
-import Skeleton from '../skeleton/Skeleton'
+import Skeleton from '../skeleton/Skeleton';
+import PropTypes from 'prop-types';
+
 
 import './charInfo.scss';
 
@@ -111,6 +113,7 @@ const View = ({char}) => {
                 <ul className="char__comics-list">
                     {comics.length > 0 ? null : 'There is no comics'}
                     {
+                        // eslint-disable-next-line array-callback-return
                         comics.map((item, i) => {
                             if (i < 10) {
                                 return (
@@ -128,5 +131,10 @@ const View = ({char}) => {
         </>
     )
 }
+
+CharInfo.propTypes = {
+    charId: PropTypes.number
+}
+
 
 export default CharInfo;
