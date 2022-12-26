@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import AppHeader from "../appHeader/AppHeader";
+import AppBanner from '../appBanner/AppBanner';
+import ComicsList from '../comicsList/ComicsList';
 import RandomChar from "../randomChar/RandomChar";
 import CharInfo from "../charInfo/CharInfo";
 
@@ -21,7 +23,7 @@ const App = () => {
             <div className="app">
                 <AppHeader/>
                 <main>
-                    <ErrorBoundary>
+                    {/* <ErrorBoundary>
                         <RandomChar/>
                     </ErrorBoundary>
                     <div className="char__content">
@@ -31,7 +33,9 @@ const App = () => {
                         <ErrorBoundary>
                             <CharInfo charId={selectedChar} />  
                         </ErrorBoundary>
-                    </div>
+                    </div> */}
+                    <AppBanner />
+                    <ComicsList />
                     <img className="bg-decoration" src={decoration} alt="vision"/>
                 </main>
             </div>
