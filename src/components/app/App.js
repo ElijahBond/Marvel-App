@@ -12,10 +12,10 @@ const App = () => {
                     <AppHeader/>
                     <main>
                         <Routes>
-                        <Route path='*' element={<Page404 />} />
+                        <Route path='/' element={<MainPage />} />
                         <Route path='/comics' element={<ComicsPage />} />
                         <Route path='/comics/:comicsID' element={<SingleComicsPage />} />
-                        <Route path='/' element={<MainPage />} />
+                        <Route path='*' element={<Page404 />} />
                         </Routes>
                     </main>
                 </div>

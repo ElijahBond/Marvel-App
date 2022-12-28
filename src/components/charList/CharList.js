@@ -58,7 +58,7 @@ const CharList = (props) => {
 
             return (
                 <li className="char__item"
-                    key={i}
+                    key={item.id}
                     tabIndex={0}
                     ref={element => itemRefs.current[i] = element}
                     onClick={() => {
